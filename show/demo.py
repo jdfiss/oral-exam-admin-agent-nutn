@@ -1115,7 +1115,7 @@ def step14_assistant():
 
 
 def step15_audit():
-    """Step 15: 稽核軌跡總覽——對照比賽門檻第三條"""
+    """Step 15: 稽核軌跡總覽——Agentic 能力對照"""
     _banner(15, "稽核軌跡總覽：每一步都可查核")
     from koushi import agent_trace
 
@@ -1142,7 +1142,7 @@ def step15_audit():
     from koushi.mailbox_agent import POLICY_LABELS
     _info("信箱 agent 政策分布：" + "、".join(f"{POLICY_LABELS.get(k, k)} {v}" for k, v in policies.items()))
 
-    _section("對照比賽門檻（第三條）")
+    _section("Agentic 能力對照")
     for line in (
         "1 目標導向與任務分解：信箱 agent 每封信 8 個有依賴的步驟（步驟 11）",
         "2 工具調用：距離表檢索、主檔查詢、修正層、問答助理自選唯讀工具（步驟 11、13、14）",

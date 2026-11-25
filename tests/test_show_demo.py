@@ -133,7 +133,7 @@ def test_show_demo_flow_in_process(demo, monkeypatch, capsys):
     assert "代號 CASE_03 不在引用的工具結果中" in out
     assert "沒有呼叫模型（模型呼叫 0 次）" in out
     # 步驟 15：稽核軌跡總覽
-    assert "agent_trace 共" in out and "對照比賽門檻（第三條）" in out
+    assert "agent_trace 共" in out and "Agentic 能力對照" in out
     # 步驟 16：AI 總開關——停用後不建立模型、模型呼叫 0 次、恢復後留稽核紀錄
     assert "make_llm() → None" in out and "模型呼叫 0 次（傳入的模型也不會被使用）" in out
     assert "AI 總開關：已恢復運作" in out
